@@ -1,0 +1,83 @@
+.sw-container {
+  width: 100%;
+  max-width: 412px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10px;
+  font-family: "Roboto", sans-serif;
+
+  .lcd-wrap {
+    display: flex;
+    align-items: center;
+    padding-bottom: 12px;
+    span {
+      margin: 0 6px 0 10px;
+      max-height: 100%;
+      &:last-of-type {
+        margin-top: 20px;
+      }
+    }
+  }
+  .sw {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    height: 165px;
+    .display {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      flex: 1;
+      color: #7dd12e;
+      font-size: 40px;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4) inset;
+      background-color: #242424;
+    }
+    .controls {
+      display: flex;
+      height: 56px;
+      button {
+        font-size: 18px;
+        border: 1px solid rgb(189, 189, 189);
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:first-of-type {
+          flex: 4;
+          max-width: 247px;
+        }
+        &:first-of-type {
+          fa-icon {
+            font-size: 12px;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+  .laps {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      display: flex;
+      margin-bottom: 10px;
+      align-items: center;
+    }
+    button {
+      border: 0;
+      margin-left: auto;
+      color: #fff;
+      font-weight: 500;
+      height: 30px;
+      background-color: #ff0000;
+    }
+  }
+}
