@@ -2,14 +2,14 @@
   <div class="sw">
     <div class="display">
       <div class="lcd-wrap">
-        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" activeColor="#7DD12E"
-          [number]="minutes"></app-lcd>
-        <span>:</span>
-        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" activeColor="#7DD12E"
-          [number]="seconds"></app-lcd>
-        <span>.</span>
-        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" activeColor="#7DD12E"
-          [number]="milliseconds"></app-lcd>
+        <app-lcd backgroundColor="transparent" disabledColor="#324422" activeColor="#7DD12E" [number]="minutes">
+        </app-lcd>
+        <span></span>
+        <app-lcd backgroundColor="transparent" disabledColor="#324422" activeColor="#7DD12E" [number]="seconds">
+        </app-lcd>
+        <span></span>
+        <app-lcd backgroundColor="transparent" disabledColor="#324422" activeColor="#7DD12E" [number]="milliseconds">
+        </app-lcd>
       </div>
     </div>
     <div class="controls">
@@ -28,11 +28,13 @@
   <ul class="laps">
     <li *ngFor="let lap of laps; let i = index">
       <span class="lcd-wrap">
-        <app-lcd backgroundColor="transparent" disabledColor="#424242" activeColor="#fff" width="10px" height="20px"
-          [number]="lap.minutes"></app-lcd> <span>:</span>
-        <app-lcd backgroundColor="transparent" width="10px" height="20px" disabledColor="#424242" activeColor="#fff"
-          [number]="lap.seconds"></app-lcd><span>.</span>
-        <app-lcd backgroundColor="transparent" width="10px" height="20px" disabledColor="#424242" activeColor="#fff"
+        <app-lcd backgroundColor="transparent" height="12px" width="28px" disabledColor="#424242" activeColor="#fff"
+          [number]="lap.minutes"></app-lcd>
+        <span></span>
+        <app-lcd backgroundColor="transparent" height="12px" width="28px" disabledColor="#424242" activeColor="#fff"
+          [number]="lap.seconds"></app-lcd>
+        <span></span>
+        <app-lcd backgroundColor="transparent" height="12px" width="28px" disabledColor="#424242" activeColor="#fff"
           [number]="lap.milliseconds"></app-lcd>
       </span>
       <button (click)="remove(i)">REMOVE</button>

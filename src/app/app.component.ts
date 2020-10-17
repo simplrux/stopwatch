@@ -111,6 +111,7 @@ export class AppComponent {
 
   remove(i: number) {
     this.laps.splice(i, 1);
+    localStorage.setItem('laps', JSON.stringify(this.laps));
   }
 
 }

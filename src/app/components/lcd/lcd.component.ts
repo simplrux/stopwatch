@@ -9,8 +9,7 @@ export class LcdComponent implements OnInit {
 
   _number: number = 0;
 
-  /*number to display
-  default 0*/
+
   @Input() set number(v) {
     this._number = v;
     this.showNumber();
@@ -19,10 +18,11 @@ export class LcdComponent implements OnInit {
   @Input() backgroundColor = '#000';
 
 
-  @Input() width = '20px';
+  @Input() width = '45px';
+  @Input() borderWidth = 3.25;
 
 
-  @Input() height = '40px';
+  @Input() height = '30px';
 
 
   @Input() activeColor = 'rgb(243, 0, 0)';
