@@ -1,44 +1,32 @@
 <div class="sw-container">
-
   <div class="sw">
     <div class="display">
-      <!-- <span>{{minutes}}:</span><span>{{seconds}}.</span> <span>{{milliseconds}}</span> -->
       <div class="lcd-wrap">
-
-        <app-lcd backgroundColor="transparent"  width="12px" height="28px" disabledColor="#324422" 
-        activeColor="#7DD12E"
+        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" activeColor="#7DD12E"
           [number]="minutes"></app-lcd>
         <span>:</span>
-        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" 
-        activeColor="#7DD12E"
+        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" activeColor="#7DD12E"
           [number]="seconds"></app-lcd>
         <span>.</span>
-        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" 
-        activeColor="#7DD12E"
+        <app-lcd backgroundColor="transparent" width="12px" height="28px" disabledColor="#324422" activeColor="#7DD12E"
           [number]="milliseconds"></app-lcd>
-
       </div>
-
     </div>
     <div class="controls">
-      <button class="play-pause" (click)="startTimer()">
+      <button class="play-pause" (click)="startTimer(false)">
         <fa-icon [icon]="faPlay"></fa-icon>
         {{ startText }}
       </button>
       <button (click)="lapTimeSplit()">
         <fa-icon [icon]="faStopWatch"></fa-icon>
-
       </button>
       <button (click)="clearTimer()">
         <fa-icon [icon]="faTrash"></fa-icon>
-
       </button>
     </div>
-
   </div>
-
   <ul class="laps">
-    <li *ngFor="let lap of laps;let i = index">
+    <li *ngFor="let lap of laps; let i = index">
       <span class="lcd-wrap">
         <app-lcd backgroundColor="transparent" disabledColor="#424242" activeColor="#fff" width="10px" height="20px"
           [number]="lap.minutes"></app-lcd> <span>:</span>
@@ -47,24 +35,7 @@
         <app-lcd backgroundColor="transparent" width="10px" height="20px" disabledColor="#424242" activeColor="#fff"
           [number]="lap.milliseconds"></app-lcd>
       </span>
-      <button>REMOVE</button>
-
+      <button (click)="remove(i)">REMOVE</button>
     </li>
   </ul>
-
-
 </div>
-
-
-
-<!-- <button (click)="start()">Start</button>
-<button (click)="stop()">Stop</button>
-
-<div style="width: 100px; text-align:center; position: relative; left: 50%; transform: translateX(-50%);">
-  <h1></h1>
-</div>
-
-<button style="position: relative; left: 50%; transform: translateX(-50%);" (click)="record()">+</button>
-
-<h3>Records</h3>
- -->

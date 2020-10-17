@@ -13,7 +13,7 @@
     align-items: center;
     padding-bottom: 12px;
     span {
-      margin: 0 6px 0 10px;
+      margin: 6px 4px 0px 10px;
       max-height: 100%;
       &:last-of-type {
         margin-top: 20px;
@@ -70,6 +70,11 @@
       display: flex;
       margin-bottom: 10px;
       align-items: center;
+      .lcd-wrap{
+        span{
+          color: #fff;
+        }
+      }
     }
     button {
       border: 0;
