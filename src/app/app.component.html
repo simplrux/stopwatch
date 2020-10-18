@@ -1,7 +1,7 @@
 <div class="sw-container">
   <div class="sw">
     <div class="display">
-      <div class="lcd-wrap">
+      <div [class.blink]="running" class="lcd-wrap">
         <app-lcd backgroundColor="transparent" disabledColor="#324422" activeColor="#7DD12E" [number]="minutes">
         </app-lcd>
         <span></span>
